@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Kingthings';
+    src: url('components/fonts/KingthingsXstitch-r488.ttf') format('truetype');
+}
+
+:root {
+  --color-primary: #F6239F;
+  --color-secondary: #7E009D;
+  --color-background: #FEE4E0;
+  --color-surface-light: #FFF5F2;
+  --color-surface-dark: #2A0033;
+  --color-border: #D8BFD8;
+  --color-text-primary: #2D2D2D;
+  --color-text-secondary: #5C5C5C;
+  --color-accent-peach: #FFC6B9;
+  --color-highlight-lavender: #D8B4F8;
+  --color-success: #4CAF50;
+  --color-warning: #FFA726;
+  --color-error: #E53935;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: 'Kingthings', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+    size: auto;
+}
+
+#main p {
+    background: var(--color-secondary);
+}
+
+#hero {
+  background: var(--color-background);
+}
+
+#hero h2 {
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+#hero h1 {
+  font-family: 'Kingthings', Helvetica, Arial, sans-serif;
+  font-size: 64px;
+  font-weight: 300;
+  text-align: center;
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-title img {
+  height: 64px;
+}
+
+#message p {
+  line-height: 140%;
+  margin: 16px 0 24px;
+  font-size: 14px;
+}
+
+.main a {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  background: var(--color-primary);
+  text-decoration: none;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+#hero a {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  background: var(--color-primary);
+  text-decoration: none;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+#message,
+#message a {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#load {
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  body,
+  #message {
+    margin-top: 0;
+    background: var(--color-surface-light);
+    box-shadow: none;
+  }
+
+  body {
+    border-top: 16px solid var(--color-primary);
+  }
+}
+
+/* Navigation Bar */
+
+nav {
+  padding: 1.5rem 2rem;
+  background-color: var(--color-background);
+  color: #fff;
+  height: 72px;
+  position: relative;
+}
+
+.checkbtn {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.checkbtn img {
+  width: 60px;   /* Adjust to desired size */
+  height: auto;  /* Maintains aspect ratio */
+}
+
+
+#check {
+  display: none;
+}
+
+#check:checked~.nav-mobile {
+  display: block;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 250px;
+  background: var(--color-secondary);
+  z-index: 1;
+  font-family: 'Kingthings', Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  overflow: hidden;
+}
+
+.nav-mobile a {
+  color: #fff;
+  padding: 3rem 4.5rem;
+  display: block;
+  font-size: 24px;
+}
+
+hr {
+  background-color: var(--color-border);
+  padding: 1px;
+  border: none;
+}
